@@ -2,8 +2,10 @@ __all__ = (
     "BaseModel",
     "Product",
     "User",
+    "Wish",
 )
 
 from database.base import BaseModel
 from database.product import Product
 from database.user import User
+from database.wish import Wish
