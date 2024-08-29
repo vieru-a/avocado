@@ -4,12 +4,13 @@ from sqlalchemy import ForeignKey, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, Relationship
 
 from database import BaseModel
+from .mixins.id_int_pk import IdIntPkMixin
 
 if TYPE_CHECKING:
     from .user import User
 
 
-class Wish(BaseModel):
+class Wish(BaseModel, IdIntPkMixin):
     title: Mapped[str] = mapped_column(String(100), unique=False)
     body: Mapped[str] = mapped_column(
         Text,
