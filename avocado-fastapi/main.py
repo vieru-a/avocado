@@ -7,7 +7,7 @@ from core.config import settings
 
 from database.db_helper import db_helper
 
-from api.api_v1 import router as api_router
+from api import router as api_router
 
 
 @asynccontextmanager
